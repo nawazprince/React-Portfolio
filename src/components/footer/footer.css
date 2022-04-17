@@ -1,0 +1,27 @@
+footer{
+    background: var(--color-primary);
+    text-align: center;
+    
+    padding: 3rem 0;
+}
+
+.page_links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.page_links a{
+    color: var(--color-bg);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/*======================Media Queries(Small Device)========================================*/
+@media screen and (max-width: 600px){
+    .page_links{
+        flex-direction: column;
+    }
+  }

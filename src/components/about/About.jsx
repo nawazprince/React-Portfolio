@@ -1,10 +1,11 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/me.png'
-import {FaAward} from 'react-icons/fa'
-import {VscFolderLibrary} from 'react-icons/vsc'
+import ME from '../../assets/me2.jpeg'
+import { FaAward } from 'react-icons/fa'
+import { VscFolderLibrary } from 'react-icons/vsc'
 
-const About = () => {
+const About = () =>
+{
   return (
     <section id='about'>
       <h5>Get To Know</h5>
@@ -20,18 +21,22 @@ const About = () => {
         <div className="about_content">
           <div className="about_cards">
             <article className='about_card'>
-              <FaAward className='about_icon'/>
+              <FaAward className='about_icon' />
               <h5>Experience</h5>
               <small>2+ Years Working</small>
             </article>
             <article className='about_card'>
-              <VscFolderLibrary className='about_icon'/>
+              <VscFolderLibrary className='about_icon' />
               <h5>Projects</h5>
               <small>30+</small>
             </article>
           </div>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti accusantium facilis ducimus nemo magnam praesentium eum tenetur aliquam qui asperiores aut enim nobis corrupti, dolor est obcaecati perspiciatis doloremque illum!</p>
+          <p>
+            I am a software developer in the .NET field. Currently working for Alchemy Software Limited.
+            <br /> 
+            Developing and maintaining projects build with MSSQL, ASP.NET Web Form, Web API, ASP.NET MVC, Angular JS.
+          </p>
 
           <a href="#contact" className='btn btn-primary'>Let's Talk</a>
         </div>
