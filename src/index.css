@@ -59,7 +59,7 @@ h1 {
 }
 
 section {
-  padding-top: 7rem;
+  padding-top: 6rem;
   height: 100vh;
 }
 
@@ -121,8 +121,12 @@ img {
     width: var(--container-width-md);
   }
 
-  section {
-    margin-top: 6rem;
+  section{
+    padding-top: 4rem;
+  }
+
+  .btn{
+    padding: 0.6rem 0.8rem;
   }
 }
 
