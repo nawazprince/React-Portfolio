@@ -23,7 +23,7 @@ const About = () =>
             <article className='about_card'>
               <FaAward className='about_icon' />
               <h5>Experience</h5>
-              <small>2+ Years Working</small>
+              <small>Since 2020</small>
             </article>
             <article className='about_card'>
               <VscFolderLibrary className='about_icon' />
@@ -33,7 +33,7 @@ const About = () =>
           </div>
 
           <p>
-            I am a software developer in the .NET field. Currently working for Alchemy Software Limited.
+            I am a software developer in the .NET field. Currently working for Corporate IT Limited.
             <br /> 
             Developing and maintaining projects build with MSSQL, ASP.NET Web Form, Web API, ASP.NET MVC, Angular JS.
           </p>
