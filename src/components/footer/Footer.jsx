@@ -7,7 +7,7 @@ const Footer = () =>
     <footer>
       <div className="container footer_container">
         <ul className='page_links'>
-          <li><a href="#">Home</a></li>
+          <li><a href="#header">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experince</a></li>
           <li><a href="#services">Services</a></li>
