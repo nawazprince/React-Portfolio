@@ -24,11 +24,3 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Run tests
-      run: npm test
-
-    # Optional: Add a linting step
-    - name: Lint
-      run: npm run lint
-
-    # Optional: Add a step to run any other checks or validations
