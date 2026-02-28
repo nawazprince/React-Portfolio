@@ -1,22 +1,39 @@
+import { useEffect } from 'react';
 import './App.css';
+import Nav from './components/nav/Nav';
 import Header from './components/header/Header';
-import Nav from './components/nav/Nav'
-import About from './components/about/About'
-import Services from './components/services/Services'
-import Experience from './components/experience/Experience'
-import Contact from './components/contact/Contact'
-import Footer from './components/footer/Footer'
+import About from './components/about/About';
+import Experience from './components/experience/Experience';
+import Services from './components/services/Services';
+import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
 
 function App() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div>
-      <Header/>
-      <Nav/>
-      <About/>
-      <Experience/>
-      <Services/>
-      <Contact/>
-      <Footer/>
+      <Nav />
+      <Header />
+      <About />
+      <Experience />
+      <Services />
+      <Contact />
+      <Footer />
     </div>
   );
 }

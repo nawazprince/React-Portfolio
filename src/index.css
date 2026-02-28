@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -11,22 +11,23 @@
 }
 
 :root {
-  /* --color-bg: #1f1f38;
-  --color-bg-variant: #2c2c6c;
-  --color-primary: #4db5ff; */
+  --color-bg:          #0d1f18;
+  --color-bg-variant:  #152a20;
+  --color-surface:     rgba(255, 255, 255, 0.04);
+  --color-primary:     #52b788;
+  --color-primary-dim: rgba(82, 183, 136, 0.12);
+  --color-border:      rgba(82, 183, 136, 0.18);
+  --color-white:       #f0f4f2;
+  --color-light:       rgba(240, 244, 242, 0.5);
 
-  --color-bg: #182e26;
-  --color-bg-variant: #0e221b;
-  --color-primary: #52b788;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Poppins', sans-serif;
 
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
-  --color-white: #fff;
-  --color-light: rgba(255, 255, 255, 0.6);
+  --container-max: 720px;
+  --container-md: 86%;
+  --container-sm: 90%;
 
-  --container-width-lg: 75%;
-  --container-width-md: 86%;
-  --container-width-sm: 90%;
-
+  --nav-height: 68px;
   --transition: all 400ms ease;
 }
 
@@ -39,50 +40,80 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-sans);
   background: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
-/*=========================General Styles================================*/
+/* ── Container ── */
 .container {
-  width: var(--container-width-lg);
+  max-width: var(--container-max);
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 500;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
+/* ── Sections ── */
 section {
-  padding-top: 6rem;
-  height: 100vh;
+  padding: 8rem 0;
 }
 
-section>h2,
-section>h5 {
-  text-align: center;
+/* ── Section labels ── */
+.section_label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
   color: var(--color-light);
+  margin-bottom: 0.5rem;
 }
 
-section>h2 {
+.section_heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 3rem;
+  letter-spacing: -0.01em;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
   color: var(--color-primary);
-  margin-bottom: 2rem;
+  padding: 0.65rem 1.3rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  transition: var(--transition);
+  background: transparent;
+  letter-spacing: 0.02em;
 }
 
-.text-light {
-  color: var(--color-light);
+.btn:hover {
+  background: var(--color-primary-dim);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background: #3fa070;
+  border-color: #3fa070;
+  color: var(--color-bg);
+}
+
+/* ── Links ── */
 a {
   color: var(--color-primary);
   transition: var(--transition);
@@ -92,56 +123,45 @@ a:hover {
   color: var(--color-white);
 }
 
-.btn {
-  width: max-content;
-  display: inline-block;
-  color: var(--color-primary);
-  padding: 0.75rem 1.2rem;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  border: 1px solid var(--color-primary);
-  transition: var(--transition);
-}
-
-.btn:hover {
-  background: var(--color-white);
-  color: var(--color-bg);
-  border-color: transparent;
-}
-
-.btn-primary {
-  color: var(--color-bg);
-  background: var(--color-primary);
-}
-
+/* ── Images ── */
 img {
   display: block;
   object-fit: cover;
   width: 100%;
 }
 
-/*======================Media Queries(Medium Device)========================================*/
+/* ── Scroll-triggered fade-up animation ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 650ms ease, transform 650ms ease;
+}
+
+.fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for sibling elements */
+.fade-up:nth-child(2) { transition-delay: 80ms; }
+.fade-up:nth-child(3) { transition-delay: 160ms; }
+.fade-up:nth-child(4) { transition-delay: 240ms; }
+.fade-up:nth-child(5) { transition-delay: 320ms; }
+
+/* ── Media Queries ── */
 @media screen and (max-width: 1024px) {
   .container {
-    width: var(--container-width-md);
+    max-width: none;
+    width: var(--container-md);
   }
 
-  section{
-    padding-top: 4rem;
-  }
-
-  .btn{
-    padding: 0.6rem 0.8rem;
+  section {
+    padding: 6rem 0;
   }
 }
 
-/*======================Media Queries(Small Device)========================================*/
 @media screen and (max-width: 600px) {
   .container {
-    width: var(--container-width-sm);
-  }
-
-  section>h2 {
-    margin-bottom: 2rem;
+    width: var(--container-sm);
   }
 }

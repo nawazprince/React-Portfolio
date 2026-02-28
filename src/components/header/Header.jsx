@@ -1,27 +1,29 @@
-import React from 'react'
-import CTA from './CTA'
-import './header.css'
-import ME from '../../assets/me.png'
-import HeaderSocial from './HeaderSocial'
+import React from 'react';
+import './header.css';
+import CV from '../../assets/CV.pdf';
 
 const Header = () => {
   return (
     <section id='header'>
       <div className="container header_container">
-        <h5>Hello, I'm</h5>
-        <h1>SYED NAWAZ PRINCE</h1>
-        <h5 className="text-light">.NET Developer</h5>
-        <CTA/>
-        <HeaderSocial/>
-        
-        <div className="me">
-          <img src={ME} alt="Me" />
+        <div className="header_content fade-up">
+          <span className="header_greeting">hello, I'm</span>
+          <h1 className="header_name">Syed Nawaz<br />Prince</h1>
+          <div className="header_rule" />
+          <p className="header_role">.NET Developer</p>
+          <div className="header_cta">
+            <a href={CV} download className="btn">Download CV</a>
+            <a href="#contact" className="btn btn-primary">Let's Talk</a>
+          </div>
         </div>
 
-        <a href="#contact" className='scroll_down'>Scroll down</a>
+        <div className="header_scroll">
+          <span className="scroll_line" />
+          <a href="#about" className="scroll_label">scroll</a>
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

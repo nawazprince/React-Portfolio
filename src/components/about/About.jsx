@@ -1,48 +1,47 @@
-import React from 'react'
-import './about.css'
-import ME from '../../assets/me2.jpeg'
-import { FaAward } from 'react-icons/fa'
-import { VscFolderLibrary } from 'react-icons/vsc'
+import React from 'react';
+import './about.css';
+import ME from '../../assets/me2.jpeg';
 
-const About = () =>
-{
+const About = () => {
   return (
     <section id='about'>
-      <h5>Get To Know</h5>
-      <h2>About Me</h2>
+      <div className="container">
+        <p className="section_label">Get To Know</p>
+        <div className="about_container">
 
-      <div className="container about_container">
-        <div className="about_me">
-          <div className="about_me-img">
-            <img src={ME} alt="Me" />
-          </div>
-        </div>
-
-        <div className="about_content">
-          <div className="about_cards">
-            <article className='about_card'>
-              <FaAward className='about_icon' />
-              <h5>Experience</h5>
-              <small>Since 2020</small>
-            </article>
-            <article className='about_card'>
-              <VscFolderLibrary className='about_icon' />
-              <h5>Projects</h5>
-              <small>30+</small>
-            </article>
+          <div className="about_photo fade-up">
+            <div className="about_photo-frame">
+              <img src={ME} alt="Syed Nawaz Prince" />
+            </div>
           </div>
 
-          <p>
-            I am a software developer in the .NET field. Currently working for Corporate IT Limited.
-            <br /> 
-            Developing and maintaining projects build with MSSQL, ASP.NET Web Form, Web API, ASP.NET MVC, Angular JS.
-          </p>
+          <div className="about_content">
+            <h2 className="section_heading fade-up">About Me</h2>
 
-          <a href="#contact" className='btn btn-primary'>Let's Talk</a>
+            <div className="about_stats fade-up">
+              <div className="about_stat">
+                <span className="stat_number">5+</span>
+                <span className="stat_label">Years Experience</span>
+              </div>
+              <div className="about_stat">
+                <span className="stat_number">30+</span>
+                <span className="stat_label">Projects Delivered</span>
+              </div>
+            </div>
+
+            <p className="about_bio fade-up">
+              Software developer specializing in the .NET ecosystem. Currently at Corporate IT Limited,
+              building and maintaining enterprise applications with MS SQL, ASP.NET Web Forms,
+              Web API, ASP.NET MVC, and Angular JS.
+            </p>
+
+            <a href="#contact" className="btn btn-primary fade-up">Let's Talk</a>
+          </div>
+
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

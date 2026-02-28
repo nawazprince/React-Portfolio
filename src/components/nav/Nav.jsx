@@ -1,22 +1,41 @@
-import React, { useState } from 'react'
-import './nav.css'
-import {AiOutlineHome, AiOutlineUser} from 'react-icons/ai'
-import {BiBook, BiMessageSquareDetail} from 'react-icons/bi'
-import {RiServiceLine} from 'react-icons/ri'
+import React, { useState, useEffect } from 'react';
+import './nav.css';
 
 const Nav = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('header');
 
-  const [activeNav, setActiveNav] = useState('#header')
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+
+      const sections = ['header', 'about', 'experience', 'services', 'contact'];
+      const current = sections.find(id => {
+        const el = document.getElementById(id);
+        if (!el) return false;
+        const rect = el.getBoundingClientRect();
+        return rect.top <= 120 && rect.bottom >= 120;
+      });
+      if (current) setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav>
-      <a href="#header" onClick={()=>setActiveNav('#header')} className={activeNav === '#header'?'active':''}><AiOutlineHome/></a>
-      <a href="#about" onClick={()=>setActiveNav('#about')} className={activeNav === '#about'?'active':''}><AiOutlineUser/></a>
-      <a href="#experience" onClick={()=>setActiveNav('#experience')} className={activeNav === '#experience'?'active':''}><BiBook/></a>
-      <a href="#services" onClick={()=>setActiveNav('#services')} className={activeNav === '#services'?'active':''}><RiServiceLine/></a>
-      <a href="#contact" onClick={()=>setActiveNav('#contact')} className={activeNav === '#contact'?'active':''}><BiMessageSquareDetail/></a>
+    <nav className={scrolled ? 'scrolled' : ''}>
+      <div className="nav_container">
+        <a href="#header" className="nav_logo">Syed Nawaz</a>
+        <div className="nav_links">
+          <a href="#about"      className={activeSection === 'about'      ? 'active' : ''}>About</a>
+          <a href="#experience" className={activeSection === 'experience' ? 'active' : ''}>Skills</a>
+          <a href="#services"   className={activeSection === 'services'   ? 'active' : ''}>Services</a>
+          <a href="#contact"    className={activeSection === 'contact'    ? 'active' : ''}>Contact</a>
+        </div>
+      </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;
