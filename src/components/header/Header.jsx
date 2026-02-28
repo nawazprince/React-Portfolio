@@ -13,7 +13,7 @@ const Header = () => {
           <p className="header_role">Senior .NET Developer</p>
           <p className="header_tagline">
             5+ years building enterprise web applications with the .NET ecosystem —
-            currently at MBSPro, Australia's leading AI-powered billing platform.
+            currently working at MBSPro, Australia's leading AI-powered billing platform.
           </p>
           <div className="header_cta">
             <a href={CV} download className="btn">Download CV</a>
