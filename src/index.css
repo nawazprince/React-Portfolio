@@ -164,4 +164,12 @@ img {
   .container {
     width: var(--container-sm);
   }
+
+  section {
+    padding: 5rem 0;
+  }
+
+  .section_heading {
+    font-size: 1.7rem;
+  }
 }

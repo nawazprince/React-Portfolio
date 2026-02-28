@@ -1,6 +1,6 @@
 import React from 'react';
 import './about.css';
-import ME from '../../assets/me2.jpeg';
+import ME from '../../assets/me.png';
 
 const About = () => {
   return (
@@ -30,9 +30,9 @@ const About = () => {
             </div>
 
             <p className="about_bio fade-up">
-              Software developer specializing in the .NET ecosystem. Currently at Corporate IT Limited,
-              building and maintaining enterprise applications with MS SQL, ASP.NET Web Forms,
-              Web API, ASP.NET MVC, and Angular JS.
+              Software developer specializing in the .NET ecosystem. Currently working at MBSPro, Australia's Leading AI-Powered
+              Scribe & MBS Billing Platform.
+              Building and maintaining enterprise applications with .NET 10.
             </p>
 
             <a href="#contact" className="btn btn-primary fade-up">Let's Talk</a>
