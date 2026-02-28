@@ -1,54 +1,74 @@
-.services_category {
-  max-width: 520px;
+.services_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-.services_category-title {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--color-white);
-  margin-bottom: 1rem;
-  letter-spacing: 0.01em;
-}
-
-.services_rule {
-  width: 100%;
-  height: 1px;
-  background: var(--color-border);
-  margin-bottom: 0.5rem;
-}
-
-.services_list {
-  display: flex;
-  flex-direction: column;
-}
-
-.services_item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.9rem 0;
-  padding-left: 0;
-  border-bottom: 1px solid rgba(82, 183, 136, 0.07);
-  color: var(--color-light);
-  font-size: 0.88rem;
-  transition: color 300ms ease, padding-left 300ms ease;
+/* ── Card ── */
+.service_card {
+  padding: 2rem 1.8rem;
+  background: var(--color-surface);
+  transition: background 300ms ease;
   cursor: default;
 }
 
-.services_item:hover {
-  color: var(--color-white);
-  padding-left: 0.4rem;
+.service_card:hover {
+  background: var(--color-primary-dim);
 }
 
-.services_item:hover .services_arrow {
-  color: var(--color-primary);
-  transform: translateX(3px);
-}
-
-.services_arrow {
+.service_number {
+  display: block;
   font-family: var(--font-mono);
-  color: rgba(82, 183, 136, 0.6);
-  font-size: 0.85rem;
-  transition: color 300ms ease, transform 300ms ease;
-  flex-shrink: 0;
+  font-size: 0.62rem;
+  color: var(--color-primary);
+  letter-spacing: 0.14em;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.service_title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.service_desc {
+  font-size: 0.82rem;
+  color: var(--color-light);
+  line-height: 1.75;
+}
+
+/* Dividers between cards */
+.service_card:nth-child(1),
+.service_card:nth-child(2) {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.service_card:nth-child(1),
+.service_card:nth-child(3) {
+  border-right: 1px solid var(--color-border);
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 600px) {
+  .services_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service_card:nth-child(1),
+  .service_card:nth-child(2),
+  .service_card:nth-child(3) {
+    border-bottom: 1px solid var(--color-border);
+    border-right: none;
+  }
+
+  .service_card:nth-child(4) {
+    border-bottom: none;
+  }
 }

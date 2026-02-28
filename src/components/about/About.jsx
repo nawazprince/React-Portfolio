@@ -24,15 +24,21 @@ const About = () => {
                 <span className="stat_label">Years Experience</span>
               </div>
               <div className="about_stat">
+                <span className="stat_number">3</span>
+                <span className="stat_label">Companies</span>
+              </div>
+              <div className="about_stat">
                 <span className="stat_number">30+</span>
                 <span className="stat_label">Projects Delivered</span>
               </div>
             </div>
 
             <p className="about_bio fade-up">
-              Software developer specializing in the .NET ecosystem. Currently working at MBSPro, Australia's Leading AI-Powered
-              Scribe & MBS Billing Platform.
-              Building and maintaining enterprise applications with .NET 10.
+              Software developer specializing in the .NET ecosystem, with 5+ years building
+              and shipping enterprise-grade web applications. Started at Alchemy Software
+              engineering full-stack solutions, progressed through Corporate IT integrating
+              payment and SMS gateways, and now working remotely as Senior Software Engineer
+              at MBSPro — Australia's leading AI-powered MBS billing platform.
             </p>
 
             <a href="#contact" className="btn btn-primary fade-up">Let's Talk</a>

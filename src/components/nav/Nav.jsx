@@ -11,7 +11,7 @@ const Nav = () => {
       setScrolled(window.scrollY > 40);
       setMenuOpen(false);
 
-      const sections = ['header', 'about', 'experience', 'services', 'contact'];
+      const sections = ['header', 'about', 'work', 'experience', 'services', 'education', 'contact'];
       const current = sections.find(id => {
         const el = document.getElementById(id);
         if (!el) return false;
@@ -34,6 +34,7 @@ const Nav = () => {
 
         <div className={`nav_links${menuOpen ? ' open' : ''}`}>
           <a href="#about"      className={activeSection === 'about'      ? 'active' : ''} onClick={close}>About</a>
+          <a href="#work"       className={activeSection === 'work'       ? 'active' : ''} onClick={close}>Experience</a>
           <a href="#experience" className={activeSection === 'experience' ? 'active' : ''} onClick={close}>Skills</a>
           <a href="#services"   className={activeSection === 'services'   ? 'active' : ''} onClick={close}>Services</a>
           <a href="#contact"    className={activeSection === 'contact'    ? 'active' : ''} onClick={close}>Contact</a>

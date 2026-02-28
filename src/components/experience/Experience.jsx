@@ -3,16 +3,20 @@ import './experience.css';
 
 const skillGroups = [
   {
-    label: 'Backend',
-    skills: ['ASP.NET Core', 'ASP.NET MVC', 'Web API', 'ASP.NET Web Form'],
+    label: 'Language',
+    skills: ['C#', 'JavaScript', 'SQL'],
+  },
+  {
+    label: 'Frameworks',
+    skills: ['ASP.NET Core', 'ASP.NET MVC', 'Web API', 'ASP.NET Web Forms', 'Entity Framework', 'Dapper ORM', 'ADO.NET', 'AngularJS'],
   },
   {
     label: 'Database',
-    skills: ['MS SQL', 'ADO.NET', 'Entity Framework', 'Dapper ORM'],
+    skills: ['MS SQL Server'],
   },
   {
-    label: 'Frontend',
-    skills: ['JavaScript', 'Angular JS'],
+    label: 'Tools',
+    skills: ['Git', 'Visual Studio', 'Postman'],
   },
 ];
 

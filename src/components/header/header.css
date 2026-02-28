@@ -48,6 +48,14 @@
   color: var(--color-light);
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  margin-bottom: 1.4rem;
+}
+
+.header_tagline {
+  font-size: 0.9rem;
+  color: var(--color-light);
+  line-height: 1.75;
+  max-width: 480px;
   margin-bottom: 2.8rem;
 }
 

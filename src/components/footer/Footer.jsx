@@ -9,7 +9,7 @@ const Footer = () => {
         <p className="footer_copy">© 2025 Syed Nawaz Prince</p>
         <div className="footer_socials">
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/syednawazprince/"
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"

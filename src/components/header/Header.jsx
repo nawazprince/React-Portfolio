@@ -10,7 +10,11 @@ const Header = () => {
           <span className="header_greeting">hello, I'm</span>
           <h1 className="header_name">Syed Nawaz<br />Prince</h1>
           <div className="header_rule" />
-          <p className="header_role">.NET Developer</p>
+          <p className="header_role">Senior .NET Developer</p>
+          <p className="header_tagline">
+            5+ years building enterprise web applications with the .NET ecosystem —
+            currently at MBSPro, Australia's leading AI-powered billing platform.
+          </p>
           <div className="header_cta">
             <a href={CV} download className="btn">Download CV</a>
             <a href="#contact" className="btn btn-primary">Let's Talk</a>

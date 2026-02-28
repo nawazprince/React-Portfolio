@@ -1,32 +1,44 @@
 import React from 'react';
 import './services.css';
 
-const serviceItems = [
-  'Database design and optimization with MS SQL',
-  'Web applications with ASP.NET Web Form',
-  'Web applications with ASP.NET MVC',
-  'RESTful Web API development',
-  'Enterprise applications with ASP.NET Core',
+const serviceCards = [
+  {
+    number: '01',
+    title: 'Backend API Development',
+    description: 'Designing and building robust RESTful APIs with ASP.NET Core and Web API — scalable, secure, and production-ready.',
+  },
+  {
+    number: '02',
+    title: 'Legacy System Modernization',
+    description: 'Refactoring and upgrading legacy .NET applications to modern frameworks, improving maintainability and long-term performance.',
+  },
+  {
+    number: '03',
+    title: 'Database Design & Optimization',
+    description: 'Architecting MS SQL schemas and tuning complex queries to reduce execution time and support high-volume workloads.',
+  },
+  {
+    number: '04',
+    title: 'Third-party Integrations',
+    description: 'Integrating external APIs and services — payment gateways, SMS providers, and enterprise platforms — into .NET applications.',
+  },
 ];
 
 const Services = () => {
   return (
     <section id='services'>
       <div className="container">
-        <p className="section_label">What I Offer</p>
+        <p className="section_label">What I Bring</p>
         <h2 className="section_heading fade-up">Services</h2>
 
-        <div className="services_category fade-up">
-          <h3 className="services_category-title">Web Application Development</h3>
-          <div className="services_rule" />
-          <ul className="services_list">
-            {serviceItems.map((item, i) => (
-              <li className="services_item" key={i}>
-                <span className="services_arrow">→</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="services_grid">
+          {serviceCards.map((card, i) => (
+            <div className="service_card fade-up" key={i}>
+              <span className="service_number">{card.number}</span>
+              <h3 className="service_title">{card.title}</h3>
+              <p className="service_desc">{card.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
