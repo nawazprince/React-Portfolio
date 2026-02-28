@@ -13,7 +13,6 @@
 
 # misc
 .DS_Store
-CLAUDE.md
 .env.local
 .env.development.local
 .env.test.local
@@ -374,3 +373,8 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+
+# Cluade
+/.claude
+CLAUDE.md
