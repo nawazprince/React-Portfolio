@@ -34,11 +34,12 @@ const About = () => {
             </div>
 
             <p className="about_bio fade-up">
-              Software developer specializing in the .NET ecosystem, with 5+ years building
-              and shipping enterprise-grade web applications. Started at Alchemy Software
-              engineering full-stack solutions, progressed through Corporate IT integrating
-              payment and SMS gateways, and now working remotely as Senior Software Engineer
-              at MBSPro — Australia's leading AI-powered MBS billing platform.
+              .NET Software Developer with 5+ years of experience designing, developing, and maintaining enterprise web applications using C#, 
+              ASP.NET Core, ASP.NET MVC, Web API, and SQL Server. 
+              Experienced in building RESTful APIs, optimizing database performance, and modernizing legacy systems. 
+              Proven ability to deliver scalable software solutions across multiple domains including POS systems, inventory management, 
+              school management, and CNF job management systems. Strong background in backend development, API integration, 
+              and database optimization.
             </p>
 
             <a href="#contact" className="btn btn-primary fade-up">Let's Talk</a>

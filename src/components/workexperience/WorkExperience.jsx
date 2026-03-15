@@ -8,7 +8,7 @@ const experiences = [
     period: 'Dec 2025 — Present',
     location: 'Australia · Remote',
     bullets: [
-      'Developing and maintaining AI-driven web applications using .NET and related technologies.',
+      'Developing and maintaining AI-powered web applications using .NET and related technologies.',
       'Collaborating with front-end developers and designers to deliver high-quality software, participating in code reviews and best practices.',
       'Troubleshooting, debugging, and upgrading existing systems while contributing to project planning.',
     ],
